@@ -4,14 +4,9 @@ import requests
 
 
 def fetch_poster(movie_id):
-<<<<<<< HEAD
     # url = "https://api.themoviedb.org/3/movie/{}?api_key=8265bd1679663a7ea12ac168da84d2e8&language=en-US".format(movie_id)
-=======
-<<<<<<< HEAD
-=======
     # url = "https://api.themoviedb.org/3/movie/{}?api_key=8265bd1679663a7ea12ac168da84d2e8&language=en-US".format(movie_id)
->>>>>>> 7e9468ed59cab09c2c7dcd2feba6a4b763d3de34
->>>>>>> 0cf293e1292b1d04c8280462b1f21b45425e28b0
+
     url ='https://api.themoviedb.org/3/movie/{}?api_key=e5461f81217163256399330e5335566d&append_to_response=videos'.format(movie_id)
     data = requests.get(url)
     data = data.json()
@@ -31,47 +26,24 @@ def recommend(movie):
         recommended_movie_poster.append(fetch_poster(movie_id))
         reccommended_movie_name.append(movies.iloc[i[0]].title) 
     return reccommended_movie_name, recommended_movie_poster
-<<<<<<< HEAD
 
 
-st.header("Movies Recommandation System Using Machine Learning")
-=======
-       
-<<<<<<< HEAD
 st.header("Movies Recommendation System Using Machine Learning")
-=======
-st.header("Movies Recommandation System Using Machine Learning")
->>>>>>> 7e9468ed59cab09c2c7dcd2feba6a4b763d3de34
->>>>>>> 0cf293e1292b1d04c8280462b1f21b45425e28b0
 movies= pickle.load(open('artifacts/movies_list.pkl', 'rb'))
 similarity= pickle.load(open('artifacts/similarity.pkl', 'rb'))
 
 movies_list= movies['title'].values
 
 selected_movie= st.selectbox(
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
->>>>>>> 0cf293e1292b1d04c8280462b1f21b45425e28b0
     label=  "Type or select a movie to get recommendation",
     options= movies_list
 )
 
 if st.button(label= 'Show Recommendations'):
-<<<<<<< HEAD
     label= "Type or select a movie to get recommendations",
     options= movies_list
-
-=======
-=======
     label= "Type or select a movie to get recommendations",
     options= movies_list
-)
-
-if st.button(label= 'Show recommendations'):
->>>>>>> 7e9468ed59cab09c2c7dcd2feba6a4b763d3de34
->>>>>>> 0cf293e1292b1d04c8280462b1f21b45425e28b0
     reccommended_movie_name, recommended_movie_poster = recommend(selected_movie)
     col1, col2, col3, col4, col5 = st.columns(5)
     with col1:
