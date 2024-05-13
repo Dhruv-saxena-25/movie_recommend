@@ -66,7 +66,7 @@ here is a demo,
 
 <img src="docs/2.png" alt="workflow" width="70%">
 
-<img src="demo/3.png" alt="workflow" width="70%">
+<!-- <img src="demo/3.png" alt="workflow" width="70%"> -->
 
 
 # Dataset has been used:
